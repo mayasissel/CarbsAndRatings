@@ -12,7 +12,7 @@ and the rating of the recipe.
 
 As a part of living, food is something every person needs. Food provides us with energy and nutrients to support body functions. Deciding what to cook can be a hobby or a challenge in everyday life. Foods high in carbohydrates are critical in maintaining a healthy diet because they provide the body with glucose. However, consuming large amounts of refined simple carbohydrates has been linked to increased risk of metabolic, cardiovascular diseases and certain types of cancers. These risks are highlighted in studies done on the "Burden of Carbohydrates in Health and Disease", conducted by the national center for Biotechhnology Information.
 
-With this information in mind, we want to ananlyze whether people rate recipes with higher proportions of carbohydrates lower than recipes without high proportions of carbohydrates. To do this, we will explore 2 data sets containing recipes and reviews posted by users on [food.com](https://www.food.com/) since 2008. These data sets were originally scraped and used by Bodhisattwa Prasad Majumder, Shuyang Li, Jianmo Ni and Julian McAuley for a recipe reccommender research paper, [Generating Personalized Recipes from Historical User Preferences](https://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19c.pdf).
+With this information in mind, we want to analyze whether people rate recipes with higher proportions of carbohydrates lower than recipes without high proportions of carbohydrates. To do this, we will explore 2 data sets containing recipes and reviews posted by users on [food.com](https://www.food.com/) since 2008. These data sets were originally scraped and used by Bodhisattwa Prasad Majumder, Shuyang Li, Jianmo Ni and Julian McAuley for a recipe reccommender research paper, [Generating Personalized Recipes from Historical User Preferences](https://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19c.pdf).
 
 In this first dataset we will be looking into, `recipe`, this contains 83782 rows of unique recipes and 12 columns describing different aspects of each recipe:
 
@@ -30,6 +30,18 @@ In this first dataset we will be looking into, `recipe`, this contains 83782 row
 | `'description'`    | User-provided desciption of the recipe   |
 | `'ingredients'`    | The ingredients needed for a recipe      |
 | `'n_ingredients'`  | The number of ingredients in a recipe    |
+
+The second dataset we will be looking into, `interactions`, contains 731927 rows of reviews from a user on a specific recipe and 5 columns descibing different aspects of the review:
+
+| Column                | Desciption                               |
+| :---------------------| :----------------------------------------|
+| `'user_id'`           | User ID                                  |
+| `'recipe_id'`         | Recipe ID                                |
+| `'date'`              | Date of when this review was posted      |
+| `'rating'`            | Rating given of the recipe               |
+| `'review'`            | The text of the review given by user     |
+
+Using these two datasets, we will analyze whether people rate recipes with higher proportions of carbohydrates lower than recipes without high proportions of carbohydrates.
 
 ## Data Cleaning and Exploratory Data Analysis
 
