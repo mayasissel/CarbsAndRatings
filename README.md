@@ -25,7 +25,7 @@ In this first dataset we will be looking into, `recipe`, this contains 83782 row
 | `'submitted'`      | Date the recipe was submitted            |
 | `'tags'`           | Food.com tags that describe the recipe   |
 | `'nutrition'`      | Nutrition information in the format of [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV),saturated fat (PDV), carbohydrates (PDV)] where PDV represents "percentage of daily value" |
-|`'n_steps'`         | Number of steps in a recipe              |
+| `'n_steps'`        | Number of steps in a recipe              |
 | `'steps'`          | Text for recipe steps, in the order to be followed|
 | `'description'`    | User-provided desciption of the recipe   |
 | `'ingredients'`    | The ingredients needed for a recipe      |
@@ -50,10 +50,13 @@ For us to analyze our main question, we would need to clean our given datasets f
 1. Left merge the `recipes` and `interactions` datasets together.
 
     -This step allows for us to view all reviews of a given recipe along with the information about the recipe.
+    -To merge the `recipes` and `interactions` datasets toegther, we did a left merge on `id` from `recipes` and `recipe_id` from `interactions` which matches the recipe ID to the review for the given recipe ID.
 
 2. Verify data types of all columns in the merged dataset
 
     -This step allows for us to understand what data is contained in each column and verify the data type to ensure efficiency in later calculations.
+    -This step also allows us to view what columns may need a data type conversion later.
+    -To verify data types of all the columns, we printed the merged dataset `recipe_reviews` datatypes.
     -The columns and data type are as shown below:
 
     | Column             | Desciption  |
@@ -65,7 +68,7 @@ For us to analyze our main question, we would need to clean our given datasets f
     | `'submitted'`      | object      |
     | `'tags'`           | object      |
     | `'nutrition'`      | object      |
-    |`'n_steps'`         | int64       |
+    | `'n_steps'`        | int64       |
     | `'steps'`          | object      |
     | `'description'`    | object      |
     | `'ingredients'`    | object      |
@@ -78,11 +81,18 @@ For us to analyze our main question, we would need to clean our given datasets f
 
 3. Fill all ratings of 0 with `np.nan`
 
-    -This step allows for us to differetiate between missing ratings and negative ratings of recipes
+    -This step allows for us to differetiate between missing ratings and negative ratings of .
+    -In addition this step allows us to verify ratings on a scale of 1 to 5.
+    -To follow this step, we used the replace function on the `rating` column of our merged dataset `recipe_reviews` to replace all ratings of `0` with `np.nan`.
 
 4. Find the average rating per recipe and adding it as a new column in the merged dataset
 
     -This step is because each recipe can have multiple reviews with varying ratings, by getting the average we can get a general understanding of the rating of a specific recipe.
+    -To follow this step, we grouped the merged dataset `recipe_reviews` by `id` then took the mean values of the `rating` column. This gives us a series which we then assigned to a new column `avg_rating` into our merged dataset.
+
+5. Expand `nutrition` column into individual columns of float64 values
+
+    -This step allows for us to interact with individual objects within the `nutrition` column
 
 
 ### Univariate Analysis
