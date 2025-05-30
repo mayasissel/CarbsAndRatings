@@ -24,7 +24,7 @@ For bivariate analysis, we looked into the distribution of ratings between recip
 
 ### Interesting Aggregates
 
-For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns 'n_steps' and 'çarb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
+For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns 'n_steps' and 'carb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
 
 ## Assessment of Missingness
 
@@ -79,7 +79,7 @@ Test Statistic: The absolute difference of mean bwteeen rating of high carb reci
 
 Significance Level: 0.05
 
-The observed difference of means for 'rating' and 'carb_heavy' we got is roughly int, indicated by the red line on the graph. Because the p_value we found (0.0) is less than 0.05, we reject the null hypothesis. Concluding that the missingness of the 'rating' column is dependent on 'calories (#)'
+The observed difference of means for 'rating' and 'carb_heavy' we got is roughly -0.0067145, indicated by the red line on the graph. Because the p_value we found (0.903) is more than 0.05, we fail reject the null hypothesis. Concluding that people rate recipes equally.
 
 ## Framing a Prediction Problem
 
