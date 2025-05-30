@@ -12,11 +12,51 @@ hello
 
 ## Introduction
 
-## Data Cleaning adn Exploratory Data Analysis
+## Data Cleaning and Exploratory Data Analysis
+
+### Univariate Analysis
+
+For univariate analysis, we looked into the distribution of the proportion of carbohydtrates in recipes. In the graph below, the distribution is skewed to the middle, heavily leaning right side, indicating to us that a majority of recipes have a low proportion of carbohydrates. This skew also indicates to us that as the carbohydrate proportion rises, the less recipes there are on food.com.
+
+### Bivariate Analysis
+
+For bivariate analysis, we looked into the distribution of ratings between recipes with a high carbohydrate proportion (of 65% or higher) to recipes with a low carbohydrate proportion. In the graph below, we found that recipes with a higher amount of carbohydrates have ratings of 4-5 while recipes with lower carbohydrtaes have ratings spread 1-5 with more in 4 and 5.
+
+### Interesting Aggregates
+
+For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns 'n_steps' and 'çarb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
 
 ## Assessment of Missingness
 
+### NMAR Analysis
+
+We believe that the misssingess of the 'rating'column is NMAR because a person is less likely to return to the website to leave a rating if they hate or fail to follow through with the recipe properly. The same can be said for people who would feel neutral about a recipe but do not bother returning to the website and leave any ratings. People usually leave a rating if they have tried a recipe or follow through with creating it (without failing) and enjoyed it. A person's feelings of enjoying the recipe would then lead them to take the time to return to the website and leave a positive rating.
+
+Null Hypothesis: The missingness of ratings does not depend on the proportion of carbohydrates
+
+Alternate Hypothesis: The missingness of ratings does depend on the proportion of carbohydrates
+
+Test Statistic: The absolute difference of mean in the proportion of carbohydrates between the distribution of the group without missing ratings and the distribution of the grouop with missing ratings
+
+Significance Level: 0.05
+
+Null Hypothesis: The missingness of ratings does not depend on the calories in a recipe
+
+Alternate Hypothesis: The missingness of ratings does depend on the calories of steps in a recipe
+
+Test Statistic: The absolute difference of mean in the calories between the distribution of the group without missing ratings and the distribution of the grouop with missing ratings
+
+Significance Level: 0.05
+
 ## Hypothesis Testing
+
+Null Hypothesis: People rate recipes all the same
+
+Alternate Hypothesis: People rate recipes with high carbohydrates lower than recipes with not high carbohydrtaes
+
+Test Statistic: The absolute difference of mean bwteeen rating of high carb recipes and not high carb recipes
+
+Significance Level: 0.05
 
 ## Framing a Prediction Problem
 
