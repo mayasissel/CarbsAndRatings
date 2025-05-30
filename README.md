@@ -45,6 +45,18 @@ Using these two datasets, we will analyze whether people rate recipes with highe
 
 ## Data Cleaning and Exploratory Data Analysis
 
+For us to analyze our main question, we would need to clean our given datasets for better efficiency and readability. To do this we followed the steps outlined below:
+
+1. Left merge the `recipes` and `interactions` datasets together.
+
+    -This step allows for us to view all reviews of a given recipe along with the information about the recipe.
+
+2. Fill all ratings of 0 with `np.nan`
+
+    -This step allows for us to differetiate between missing ratings and negative ratings of recipes
+
+3. 
+
 ### Univariate Analysis
 
 For univariate analysis, we looked into the distribution of the proportion of carbohydtrates in recipes. In the graph below, the distribution is skewed to the middle, heavily leaning right side, indicating to us that a majority of recipes have a low proportion of carbohydrates. This skew also indicates to us that as the carbohydrate proportion rises, the less recipes there are on food.com.
