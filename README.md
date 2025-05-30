@@ -2,6 +2,8 @@
 
 Authors: Maya Sissel & Trinity Truong
 
+Hello
+
 ## Overview
 
 This is a data science project for the DSC 80 course at UCSD. The project focuses
@@ -94,7 +96,7 @@ For us to analyze our main question, we would need to clean our given datasets f
 4. Find the average rating per recipe and adding it as a new column in the merged dataset
 
     -This step is because each recipe can have multiple reviews with varying ratings, by getting the average we can get a general understanding of the rating of a specific recipe.
-    
+
     -To follow this step, we grouped the merged dataset `recipe_reviews` by `id` then took the mean values of the `rating` column. This gives us a series which we then assigned to a new column `avg_rating` into our merged dataset.
 
 5. Expand `nutrition` column into individual columns of float64 values
