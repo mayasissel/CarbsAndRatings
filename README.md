@@ -51,11 +51,39 @@ For us to analyze our main question, we would need to clean our given datasets f
 
     -This step allows for us to view all reviews of a given recipe along with the information about the recipe.
 
-2. Fill all ratings of 0 with `np.nan`
+2. Verify data types of all columns in the merged dataset
+
+    -This step allows for us to understand what data is contained in each column and verify the data type to ensure efficiency in later calculations.
+    -The columns and data type are as shown below:
+
+    | Column             | Desciption  |
+    | :------------------| :-----------|
+    | `'name'`           | object      |
+    | `'id'`             | int64       |
+    | `'minutes'`        | float64     |
+    | `'contributor_id'` | int64       |
+    | `'submitted'`      | object      |
+    | `'tags'`           | object      |
+    | `'nutrition'`      | object      |
+    |`'n_steps'`         | int64       |
+    | `'steps'`          | object      |
+    | `'description'`    | object      |
+    | `'ingredients'`    | object      |
+    | `'n_ingredients'`  | int64       |
+    | `'user_id'`        | float64     |
+    | `'recipe_id'`      | float64     |
+    | `'date'`           | object      |
+    | `'rating'`         | float64     |
+    | `'review'`         | object      |
+
+3. Fill all ratings of 0 with `np.nan`
 
     -This step allows for us to differetiate between missing ratings and negative ratings of recipes
 
-3. 
+4. Find the average rating per recipe and adding it as a new column in the merged dataset
+
+    -This step is because each recipe can have multiple reviews with varying ratings, by getting the average we can get a general understanding of the rating of a specific recipe.
+
 
 ### Univariate Analysis
 
