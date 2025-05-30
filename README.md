@@ -8,9 +8,16 @@ This is a data science project for the DSC 80 course at UCSD. The project focuse
 on analyzing the relationship between the amount of carbohydrates in a recipe 
 and the rating of the recipe.
 
-hello
-
 ## Introduction
+
+As a part of living, food is something every person needs. Food provides us with energy and nutrients to support body functions. Deciding what to cook can be a hobby or a challenge in everyday life. Foods high in carbohydrates are critical in maintaining a healthy diet because they provide the body with glucose. However, consuming large amounts of refined simple carbohydrates has been linked to increased risk of metabolic, cardiovascular diseases and certain types of cancers. These risks are highlighted in studies done on the "Burden of Carbohydrates in Health and Disease", conducted by the national center for Biotechhnology Information.
+
+With this information in mind, we want to ananlyze whether people rate recipes with higher proportions of carbohydrates lower than recipes without high proportions of carbohydrates. To do this, we will explore 2 data sets containing recipes and reviews posted by users on [food.com](https://www.food.com/) since 2008. These data sets were originally scraped and used by Bodhisattwa Prasad Majumder, Shuyang Li, Jianmo Ni and Julian McAuley for a recipe reccommender research paper, [Generating Personalized Recipes from Historical User Preferences](https://cseweb.ucsd.edu/~jmcauley/pdfs/emnlp19c.pdf).
+
+In this first dataset we will be looking into, `recipe`, this contains 83782 rows of unique recipes and 12 columns describing different aspects of each recipe:
+
+| Column                            | Desciption                               |
+| :---------------------------------| :----------------------------------------|
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -24,7 +31,7 @@ For bivariate analysis, we looked into the distribution of ratings between recip
 
 ### Interesting Aggregates
 
-For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns 'n_steps' and 'carb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
+For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns `n_steps` and 'carb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
 
 ## Assessment of Missingness
 
