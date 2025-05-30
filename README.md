@@ -25,10 +25,11 @@ In this first dataset we will be looking into, `recipe`, this contains 83782 row
 | `'submitted'`      | Date the recipe was submitted            |
 | `'tags'`           | Food.com tags that describe the recipe   |
 | `'nutrition'`      | Nutrition information in the format of [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV),saturated fat (PDV), carbohydrates (PDV)] where PDV represents "percentage of daily value" |
-|`'n_steps'`         | Number of steps in a recipe  |
-
- 'steps', 'description', 'ingredients',
-       'n_ingredients'
+|`'n_steps'`         | Number of steps in a recipe              |
+| `'steps'`          | Text for recipe steps, in the order to be followed|
+| `'description'`    | User-provided desciption of the recipe   |
+| `'ingredients'`    | The ingredients needed for a recipe      |
+| `'n_ingredients'`  | The number of ingredients in a recipe    |
 
 ## Data Cleaning and Exploratory Data Analysis
 
