@@ -16,8 +16,19 @@ With this information in mind, we want to ananlyze whether people rate recipes w
 
 In this first dataset we will be looking into, `recipe`, this contains 83782 rows of unique recipes and 12 columns describing different aspects of each recipe:
 
-| Column                            | Desciption                               |
-| :---------------------------------| :----------------------------------------|
+| Column             | Desciption                               |
+| :------------------| :----------------------------------------|
+| `'name'`           | Name of the recipe                       |
+| `'id'`             | Recipe ID                                |
+| `'minutes'`        | Minutes needed to prepare recipe         |
+| `'contributor_id'` | User ID who submitted this recipe        |
+| `'submitted'`      | Date the recipe was submitted            |
+| `'tags'`           | Food.com tags that describe the recipe   |
+| `'nutrition'`      | Nutrition information in the format of [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV),saturated fat (PDV), carbohydrates (PDV)] where PDV represents "percentage of daily value" |
+|`'n_steps'`         | Number of steps in a recipe  |
+
+ 'steps', 'description', 'ingredients',
+       'n_ingredients'
 
 ## Data Cleaning and Exploratory Data Analysis
 
