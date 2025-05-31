@@ -242,9 +242,9 @@ Significance Level: 0.05
   height="600"
   frameborder="0"
 ></iframe>
-The observed difference of means for 'missing_rating' and 'carb_prop' we got is roughly 0.003209, indicated by the red line on the graph. Because the p_value we found (0.1) is greater than 0.05, we fail to reject the null hypothesis. COncluding that the missingness of the 'rating' column is not dependent on 'carb_prop'
+The observed difference of means for 'missing_rating' and 'carb_prop' we got is roughly 0.003209, indicated by the red line on the graph. Because the p_value we found (0.1) is greater than 0.05, we fail to reject the null hypothesis. Concluding that the missingness of the 'rating' column is not dependent on 'carb_prop'
 <iframe
-  src="assets/_rating_carb.html"
+  src="assets/distr_rating_carb.html"
   width="800"
   height="600"
   frameborder="0"
