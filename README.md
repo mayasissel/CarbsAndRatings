@@ -179,8 +179,8 @@ For univariate analysis, we looked into the distribution of the proportion of ca
 
 <iframe
   src="assets/univariate.html"
-  width="850"
-  height="650"
+  width="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -207,6 +207,8 @@ For this section, we investigated the relationship between the number of steps i
 |         4 |    0.372284 |      0.355476 |          0 |    1.313   |
 |         5 |    0.349412 |      0.330259 |          0 |    1.20879 |
 
+From this graph we found that as the number of steps increases, the proportion of carbohydrates in a given recipe varies. Based on this plot, recipes with 40 or more steps contain a lower proportion of carbohydrates than recipes that have 0-40 steps. This is highlighted by the lines having a negative slope downwards as the number of steps increases.
+
 <iframe
   src="assets/mini_recipes.html"
   width="800"
@@ -216,9 +218,11 @@ For this section, we investigated the relationship between the number of steps i
 
 ## Assessment of Missingness
 
+In the Dataframe `recipe_reviews` there are 3 columns with a significant number of missing values. These columns are `rating`, `review` and `description`. Because of this, we want to investighate the missingness on the DataFrame.
+
 ### NMAR Analysis
 
-We believe that the misssingess of the 'rating'column is NMAR because a person is less likely to return to the website to leave a rating if they hate or fail to follow through with the recipe properly. The same can be said for people who would feel neutral about a recipe but do not bother returning to the website and leave any ratings. People usually leave a rating if they have tried a recipe or follow through with creating it (without failing) and enjoyed it. A person's feelings of enjoying the recipe would then lead them to take the time to return to the website and leave a positive rating.
+We believe that the misssingess of the 'rating' column is NMAR because a person is less likely to return to the website to leave a rating if they hate or fail to follow through with the recipe properly. The same can be said for people who would feel neutral about a recipe but do not bother returning to the website and leave any ratings. People usually leave a rating if they have tried a recipe or follow through with creating it (without failing) and enjoyed it. A person's feelings of enjoying the recipe would then lead them to take the time to return to the website and leave a positive rating.
 
 We wanted to look into the missingness of the 'rating' column in our merged 'recipes_revies' DataFrame by testing whether 'rating' is dependent on other existing columns. To do this, we test whether or not the missingness of the 'rating' column is dependent on 'carb_prop' which is the proportion of carbohydrtaes in a given recipe. We would also test whether or not the missingness of 'rating' column is dependent on the amount of calories there are in a given recipe.
 
