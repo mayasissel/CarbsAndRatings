@@ -245,13 +245,13 @@ Significance Level: 0.05
 
 The observed difference of means for `missing_rating` and `carb_prop` we got is roughly 0.003209, indicated by the red line on the graph. Because the p_value we found (0.1) is greater than 0.05, we fail to reject the null hypothesis. Concluding that the missingness of the `rating` column is not dependent on `carb_prop`.
 <iframe
-  src="assets/distr_rating_carb.html"
+  src="assets/emp_rating_carb.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
 
-To test whether or not the missingness of the `rating` column is dependent on `calories (#)` which is the number of calories in a given recipe, we ran a permutation test by shuffling the missingness of the `rating` column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
+To test whether or not the missingness of the `rating` column is dependent on `n_ingredients` which is the number of calories in a given recipe, we ran a permutation test by shuffling the missingness of the `rating` column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
 
 To investigate this goal, we ran a permutation test following the guide below:
 
@@ -269,7 +269,7 @@ Significance Level: 0.05
   frameborder="0"
 ></iframe>
 
-The observed difference of means for `missing_rating` and `calories (#)` we got is roughly 69.007228, indicated by the red line on the graph. Because the p_value we found (0.0) is less than 0.05, we reject the null hypothesis. Concluding that the missingness of the `rating` column is dependent on `calories (#)`
+The observed difference of means for `missing_rating` and `n_ingredients` we got is roughly 0.160737, indicated by the red line on the graph. Because the p_value we found (0.0) is less than 0.05, we reject the null hypothesis. Concluding that the missingness of the `rating` column is dependent on `n_ingredients`
 <iframe
   src="assets/emp_rating_n_ingredients.html"
   width="800"
