@@ -179,8 +179,8 @@ For univariate analysis, we looked into the distribution of the proportion of ca
 
 <iframe
   src="assets/univariate.html"
-  width="800"
-  height="600"
+  width="850"
+  height="650"
   frameborder="0"
 ></iframe>
 
