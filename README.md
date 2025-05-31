@@ -207,6 +207,13 @@ For this section, we investigated the relationship between the number of steps i
 |         4 |    0.372284 |      0.355476 |          0 |    1.313   |
 |         5 |    0.349412 |      0.330259 |          0 |    1.20879 |
 
+<iframe
+  src="assets/mini_recipes.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ## Assessment of Missingness
 
 ### NMAR Analysis
