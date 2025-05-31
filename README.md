@@ -183,7 +183,6 @@ For univariate analysis, we looked into the distribution of the proportion of ca
   height="600"
   frameborder="0"
 ></iframe>
-
 ### Bivariate Analysis
 
 For bivariate analysis, we looked into the distribution of ratings between recipes with a high carbohydrate proportion (of 65% or higher) to recipes with a low carbohydrate proportion. In the graph below, we found that recipes with a higher amount of carbohydrates have ratings of 4-5 while recipes with lower carbohydrtaes have ratings spread 1-5 with more in 4 and 5.
@@ -194,7 +193,6 @@ For bivariate analysis, we looked into the distribution of ratings between recip
   height="600"
   frameborder="0"
 ></iframe>
-
 ### Interesting Aggregates
 
 For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns `n_steps` and 'carb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
@@ -215,7 +213,6 @@ From this graph we found that as the number of steps increases, the proportion o
   height="600"
   frameborder="0"
 ></iframe>
-
 ## Assessment of Missingness
 
 In the Dataframe `recipe_reviews` there are 3 columns with a significant number of missing values. These columns are `rating`, `review` and `description`. Because of this, we want to investighate the missingness on the DataFrame.
@@ -224,7 +221,9 @@ In the Dataframe `recipe_reviews` there are 3 columns with a significant number 
 
 We believe that the misssingess of the 'rating' column is NMAR because a person is less likely to return to the website to leave a rating if they hate or fail to follow through with the recipe properly. The same can be said for people who would feel neutral about a recipe but do not bother returning to the website and leave any ratings. People usually leave a rating if they have tried a recipe or follow through with creating it (without failing) and enjoyed it. A person's feelings of enjoying the recipe would then lead them to take the time to return to the website and leave a positive rating.
 
-We wanted to look into the missingness of the 'rating' column in our merged 'recipes_revies' DataFrame by testing whether 'rating' is dependent on other existing columns. To do this, we test whether or not the missingness of the 'rating' column is dependent on 'carb_prop' which is the proportion of carbohydrtaes in a given recipe. We would also test whether or not the missingness of 'rating' column is dependent on the amount of calories there are in a given recipe.
+### Missingness Dependency
+
+We wanted to look into the missingness of the 'rating' column in our merged 'recipes_reviews' DataFrame by testing whether 'rating' is dependent on other existing columns. To do this, we test whether or not the missingness of the 'rating' column is dependent on 'carb_prop' which is the proportion of carbohydrtaes in a given recipe. We would also test whether or not the missingness of 'rating' column is dependent on the amount of calories there are in a given recipe.
 
 To test whether or not the missingness of the 'rating' column is dependent on 'carb_prop' which is the proportion of carbohydrtaes in a given recipe, we ran a permutation test by shuffling the missingness of the 'rating' column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
 
@@ -237,10 +236,19 @@ Alternate Hypothesis: The missingness of ratings does depend on the proportion o
 Test Statistic: The absolute difference of mean in the proportion of carbohydrates between the distribution of the group without missing ratings and the distribution of the grouop with missing ratings
 
 Significance Level: 0.05
-
-
+<iframe
+  src="assets/distr_rating_carb.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 The observed difference of means for 'missing_rating' and 'carb_prop' we got is roughly 0.003209, indicated by the red line on the graph. Because the p_value we found (0.1) is greater than 0.05, we fail to reject the null hypothesis. COncluding that the missingness of the 'rating' column is not dependent on 'carb_prop'
-
+<iframe
+  src="assets/_rating_carb.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 To test whether or not the missingness of the 'rating' column is dependent on 'calories (#)' which is the number of calories in a given recipe, we ran a permutation test by shuffling the missingness of the 'rating' column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
 
 To investigate this goal, we ran a permutation test following the guide below:
@@ -252,8 +260,20 @@ Alternate Hypothesis: The missingness of ratings does depend on the calories of 
 Test Statistic: The absolute difference of mean in the calories between the distribution of the group without missing ratings and the distribution of the grouop with missing ratings
 
 Significance Level: 0.05
+<iframe
+  src="assets/distr_rating_n_ingredients.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 The observed difference of means for 'missing_rating' and 'calories (#)' we got is roughly 69.007228, indicated by the red line on the graph. Because the p_value we found (0.0) is less than 0.05, we reject the null hypothesis. Concluding that the missingness of the 'rating' column is dependent on 'calories (#)'
+<iframe
+  src="assets/emp_rating_n_ingredients.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 ## Hypothesis 
 
