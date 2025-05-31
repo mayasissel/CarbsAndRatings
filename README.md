@@ -188,9 +188,24 @@ For univariate analysis, we looked into the distribution of the proportion of ca
 
 For bivariate analysis, we looked into the distribution of ratings between recipes with a high carbohydrate proportion (of 65% or higher) to recipes with a low carbohydrate proportion. In the graph below, we found that recipes with a higher amount of carbohydrates have ratings of 4-5 while recipes with lower carbohydrtaes have ratings spread 1-5 with more in 4 and 5.
 
+<iframe
+  src="assets/bivariate.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 ### Interesting Aggregates
 
 For this section, we investigated the relationship between the number of steps in a recipe with the proportion of carbohydrates in the recipe. To do this, we first made a smaller dataframe containing the columns `n_steps` and 'carb_prop'. This allows for us to isolate the data we want to focus on. Next we then grouped this dataframe by 'n_steps' and aggregated the remaining carbohydtare proportion column to find the mean, median, min and max to understand whether carbohydrate proportion has any influence on the number of steps a recipe takes.
+
+|   n_steps |   mean_carb |   median_carb |   min_carb |   max_carb |
+|----------:|------------:|--------------:|-----------:|-----------:|
+|         1 |    0.391294 |      0.358737 |          0 |    1.15183 |
+|         2 |    0.398178 |      0.384615 |          0 |    1.12245 |
+|         3 |    0.389381 |      0.384615 |          0 |    1.39241 |
+|         4 |    0.372284 |      0.355476 |          0 |    1.313   |
+|         5 |    0.349412 |      0.330259 |          0 |    1.20879 |
 
 ## Assessment of Missingness
 
