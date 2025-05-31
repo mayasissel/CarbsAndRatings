@@ -130,7 +130,6 @@ For us to analyze our main question, we would need to clean our given datasets f
 ### Result
 
 This is our resulting merged DataFrame `recipe_reviews`
-
     | Column                 | Desciption          |
     | :----------------------| :-------------------|
     | `'name'`               | object              |
