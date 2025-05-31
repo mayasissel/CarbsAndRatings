@@ -277,7 +277,7 @@ The observed difference of means for `missing_rating` and `n_ingredients` we got
   frameborder="0"
 ></iframe>
 
-## Hypothesis 
+## Hypothesis Testing
 
 Our goal is to look into whether people rate recipes with high carbohydrate proportion lower than recipes with not high carbohydrate proportions. To find this we set that a high proportion of carbohydrates in a recipe is roughly 65% (0.65).
 
@@ -299,7 +299,9 @@ Significance Level: 0.5
   frameborder="0"
 ></iframe>
 
-The observed difference of means for `rating` and `carb_heavy` we got is roughly -0.0067145, indicated by the red line on the graph. Because the p_value we found (0.903) is more than 0.05, we fail reject the null hypothesis. Concluding that people rate recipes equally.
+#### Conclusion of Permutation Test
+
+The observed difference of means for `rating` and `carb_heavy` we got is roughly -0.0067145, indicated by the red line on the graph. Because the p_value we found (0.903) is more than 0.05, we fail reject the null hypothesis. Concluding that people rate recipes equally. One plausible reason for this finding could be that people do not mind the proportion of carbohydrates in a recipe.
 
 ## Framing a Prediction Problem
 
