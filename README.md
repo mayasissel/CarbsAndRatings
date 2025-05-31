@@ -160,26 +160,26 @@ This is our resulting merged DataFrame `recipe_reviews`
     | `'carb_prop'`          | float64             |
     | `'carb_heavy'`         | bool                |
 
-Our cleaned DataFrame `recipe_reviews` ended up with 234429 rows and 27 columns. Below is the head of our merged DataFrame. Because there are many coluumns we picked the columns most relevant to our main question.
+Our cleaned DataFrame `recipe_reviews` ended up with 234429 rows and 27 columns. Below is the head of our merged DataFrame. Because there are many coluumns we picked the columns most relevant to our main question. 
 
-    | name                                 |     id |   minutes |   n_ingredients |   rating |   avg_rating |   calories (#) |   carbohydrates (PDV) |   carb_prop | carb_heavy   |
-    |:-------------------------------------|-------:|----------:|----------------:|---------:|-------------:|---------------:|----------------------:|------------:|:-------------|
-    | 1 brownies in the world    best ever | 333281 |        40 |               9 |        4 |            4 |          138.4 |                     6 |    0.476879 | False        |
-    | 1 in canada chocolate chip cookies   | 453467 |        45 |              11 |        5 |            5 |          595.1 |                    26 |    0.480591 | False        |
-    | 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
-    | 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
-    | 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
+| name                                 |     id |   minutes |   n_ingredients |   rating |   avg_rating |   calories (#) |   carbohydrates (PDV) |   carb_prop | carb_heavy   |
+| :----------------------------------- | :----- | :-------- | :-------------- | :------- | :----------- | :------------- | :-------------------- | :---------- | :----------- |
+| 1 brownies in the world    best ever | 333281 |        40 |               9 |        4 |            4 |          138.4 |                     6 |    0.476879 | False        |
+| 1 in canada chocolate chip cookies   | 453467 |        45 |              11 |        5 |            5 |          595.1 |                    26 |    0.480591 | False        |
+| 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
+| 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
+| 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
 
 
 ### Univariate Analysis
 
 For univariate analysis, we looked into the distribution of the proportion of carbohydtrates in recipes. In the graph below, the distribution is skewed to the middle, heavily leaning right side, indicating to us that a majority of recipes have a low proportion of carbohydrates. This skew also indicates to us that as the carbohydrate proportion rises, the less recipes there are on food.com.
 
-<iframe 
-    src="assets/univariate.html" 
-    width="800" 
-    height="600" 
-    frameborder="0"
+<iframe
+  src="assets/univariate.html"
+  width="800"
+  height="600"
+  frameborder="0"
 ></iframe>
 
 ### Bivariate Analysis
