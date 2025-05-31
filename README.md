@@ -148,8 +148,8 @@ This is our resulting merged DataFrame `recipe_reviews`
 | `'user_id'`        | float64     |
 | `'recipe_id'`      | float64     |
 | `'date'`           | object      |
-| `'rating'`         | float64     |
-| `'review'`         | object      |
+| `'rating'`             | float64     |
+| `'review'`             | object              |
 | `'review'`             | object              |
 | `'avg_rating'`         | float64             |
 | `'calories (#)'`       | float64             |
