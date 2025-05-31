@@ -113,11 +113,19 @@ For us to analyze our main question, we would need to clean our given datasets f
 
     -This step allows for us to work with the proportion of carbohydrates in a given recipe to help answer our main question of intrest.
 
-    -To calculate the proportion of carbohydrates in a given recipe,
+    -To calculate the proportion of carbohydrates in a given recipe, we would first need to convert the values in `carbohydrates (PDV)` to grams. To do this, we first divide the values in the `carbohydrates (PDV)` column by 100 to get decimal values. Next we multiply by 300 to convert our decimal values into grams because 300 grams is 100% of the recommended daily value of carbohydrate intake. Then we take this value and multiply it by 4 because there are 4 grams per calorie. This then allows for us to divide the resulting value by the number of `calories` in a recipe to get the proportion of carbohydrates.
 
 8. Add `carb_heavy` to our merged DataFrame `recipe_reviews`
 
+    -This step allows for us to differenciate recipes with a high proportion of carbohydrates which is 65% or above from recipes with a low amount of carbohydrates.
+
+    -To do this, I assigned a new column `carb_heavy` to be a boolean checking if the value in `carb_prop` is more than or equal to 65% (.65).
+
 9. Add `missing_rating` to our merged DataFrame `recipe_reviews`
+
+    -This step allows for us to differenciate between ratings that  missing and ratings that are present.
+
+    -This column `missing_rating` is a boolean column that checks the values of `rating` to see if it is `np.nan` or missing.
 
 
 ### Univariate Analysis
