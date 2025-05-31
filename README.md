@@ -109,11 +109,15 @@ For us to analyze our main question, we would need to clean our given datasets f
 
     -To follow this step we reassigned the `submitted` and `date` columns in our merged DataFrame using pd.to_datetime.
 
-6. Add `carb_prop` to our merged DataFrame `recipe_reviews`
+7. Add `carb_prop` to our merged DataFrame `recipe_reviews`
 
     -This step allows for us to work with the proportion of carbohydrates in a given recipe to help answer our main question of intrest.
 
     -To calculate the proportion of carbohydrates in a given recipe,
+
+8. Add `carb_heavy` to our merged DataFrame `recipe_reviews`
+
+9. Add `missing_rating` to our merged DataFrame `recipe_reviews`
 
 
 ### Univariate Analysis
