@@ -130,35 +130,37 @@ For us to analyze our main question, we would need to clean our given datasets f
 ### Result
 
 This is our resulting merged DataFrame `recipe_reviews`
-    | Column                 | Desciption          |
-    | :----------------------| :-------------------|
-    | `'name'`               | object              |
-    | `'id'`                 | int64               |
-    | `'minutes'`            | float64             |
-    | `'contributor_id'`     | int64               |
-    | `'submitted'`          | datetime64[ns]      |
-    | `'tags'`               | object              |
-    | `'nutrition'`          | object              |
-    | `'n_steps'`            | int64               |
-    | `'steps'`              | object              |
-    | `'description'`        | object              |
-    | `'ingredients'`        | object              |
-    | `'n_ingredients'`      | int64               |
-    | `'user_id'`            | float64             |
-    | `'recipe_id'`          | float64             |
-    | `'date'`               | object              |
-    | `'rating'`             | float64             |
-    | `'review'`             | object              |
-    | `'avg_rating'`         | float64             |
-    | `'calories (#)'`       | float64             |
-    | `'total_fat (PDV)'`    | float64             |
-    | `'sugar (PDV)'`        | float64             |          
-    | `'sodium (PDV)'`       | float64             | 
-    | `'protein (PDV)'`      | float64             |
-    | `'saturated_fat (PDV)'`| float64             |
-    | `'carbohydrates (PDV)'`| float64             |
-    | `'carb_prop'`          | float64             |
-    | `'carb_heavy'`         | bool                |
+
+| Column             | Desciption  |
+| :------------------| :-----------|
+| `'name'`           | object      |
+| `'id'`             | int64       |
+| `'minutes'`        | float64     |
+| `'contributor_id'` | int64       |
+| `'submitted'`      | object      |
+| `'tags'`           | object      |
+| `'nutrition'`      | object      |
+| `'n_steps'`        | int64       |
+| `'steps'`          | object      |
+| `'description'`    | object      |
+| `'ingredients'`    | object      |
+| `'n_ingredients'`  | int64       |
+| `'user_id'`        | float64     |
+| `'recipe_id'`      | float64     |
+| `'date'`           | object      |
+| `'rating'`         | float64     |
+| `'review'`         | object      |
+| `'review'`             | object              |
+| `'avg_rating'`         | float64             |
+| `'calories (#)'`       | float64             |
+| `'total_fat (PDV)'`    | float64             |
+| `'sugar (PDV)'`        | float64             |          
+| `'sodium (PDV)'`       | float64             | 
+| `'protein (PDV)'`      | float64             |
+| `'saturated_fat (PDV)'`| float64             |
+| `'carbohydrates (PDV)'`| float64             |
+| `'carb_prop'`          | float64             |
+| `'carb_heavy'`         | bool                |
 
 Our cleaned DataFrame `recipe_reviews` ended up with 234429 rows and 27 columns. Below is the head of our merged DataFrame. Because there are many coluumns we picked the columns most relevant to our main question. 
 
