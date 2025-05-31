@@ -127,10 +127,56 @@ For us to analyze our main question, we would need to clean our given datasets f
 
     -This column `missing_rating` is a boolean column that checks the values of `rating` to see if it is `np.nan` or missing.
 
+### Result
+
+This is our resulting merged DataFrame `recipe_reviews`
+
+    | Column                 | Desciption          |
+    | :----------------------| :-------------------|
+    | `'name'`               | object              |
+    | `'id'`                 | int64               |
+    | `'minutes'`            | float64             |
+    | `'contributor_id'`     | int64               |
+    | `'submitted'`          | datetime64[ns]      |
+    | `'tags'`               | object              |
+    | `'nutrition'`          | object              |
+    | `'n_steps'`            | int64               |
+    | `'steps'`              | object              |
+    | `'description'`        | object              |
+    | `'ingredients'`        | object              |
+    | `'n_ingredients'`      | int64               |
+    | `'user_id'`            | float64             |
+    | `'recipe_id'`          | float64             |
+    | `'date'`               | object              |
+    | `'rating'`             | float64             |
+    | `'review'`             | object              |
+    | `'avg_rating'`         | float64             |
+    | `'calories (#)'`       | float64             |
+    | `'total_fat (PDV)'`    | float64             |
+    | `'sugar (PDV)'`        | float64             |          
+    | `'sodium (PDV)'`       | float64             | 
+    | `'protein (PDV)'`      | float64             |
+    | `'saturated_fat (PDV)'`| float64             |
+    | `'carbohydrates (PDV)'`| float64             |
+    | `'carb_prop'`          | float64             |
+    | `'carb_heavy'`         | bool                |
+
+Our cleaned DataFrame `recipe_reviews` ended up with 234429 rows and 27 columns. Below is the head of our merged DataFrame. Because there are many coluumns we picked the columns most relevant to our main question.
+
+    | name                                 |     id |   minutes |   n_ingredients |   rating |   avg_rating |   calories (#) |   carbohydrates (PDV) |   carb_prop | carb_heavy   |
+    |:-------------------------------------|-------:|----------:|----------------:|---------:|-------------:|---------------:|----------------------:|------------:|:-------------|
+    | 1 brownies in the world    best ever | 333281 |        40 |               9 |        4 |            4 |          138.4 |                     6 |    0.476879 | False        |
+    | 1 in canada chocolate chip cookies   | 453467 |        45 |              11 |        5 |            5 |          595.1 |                    26 |    0.480591 | False        |
+    | 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
+    | 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
+    | 412 broccoli casserole               | 306168 |        40 |               9 |        5 |            5 |          194.8 |                     3 |    0.169405 | False        |
+
 
 ### Univariate Analysis
 
 For univariate analysis, we looked into the distribution of the proportion of carbohydtrates in recipes. In the graph below, the distribution is skewed to the middle, heavily leaning right side, indicating to us that a majority of recipes have a low proportion of carbohydrates. This skew also indicates to us that as the carbohydrate proportion rises, the less recipes there are on food.com.
+
+<iframe src="assets/univariate.html" width="800" height="600" frameborder="0"></iframe>
 
 ### Bivariate Analysis
 
