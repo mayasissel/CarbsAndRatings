@@ -2,8 +2,6 @@
 
 Authors: Maya Sissel & Trinity Truong
 
-Hello
-
 ## Overview
 
 This is a data science project for the DSC 80 course at UCSD. The project focuses
@@ -102,6 +100,20 @@ For us to analyze our main question, we would need to clean our given datasets f
 5. Expand `nutrition` column into individual columns of float64 values
 
     -This step allows for us to interact with individual objects within the `nutrition` column
+
+    -To follow this step, we first split the `nutrition` column of our merged dataset, this allows for the values of the list to be seperated. Next we made this new series into a DataFrame called `nutrition_df`. After getting a DataFrame of this, we merged `nutrition_df` with `recipe_reviews`
+
+6. Convert `submitted` and `date` to datetime format
+
+    -This step allows for us to work with these columns as datetime to investigate relationships of other columns over a period in time.
+
+    -To follow this step we reassigned the `submitted` and `date` columns in our merged DataFrame using pd.to_datetime.
+
+6. Add `carb_prop` to our merged DataFrame `recipe_reviews`
+
+    -This step allows for us to work with the proportion of carbohydrates in a given recipe to help answer our main question of intrest.
+
+    -To calculate the proportion of carbohydrates in a given recipe,
 
 
 ### Univariate Analysis
