@@ -219,13 +219,13 @@ In the Dataframe `recipe_reviews` there are 3 columns with a significant number 
 
 ### NMAR Analysis
 
-We believe that the misssingess of the 'rating' column is NMAR because a person is less likely to return to the website to leave a rating if they hate or fail to follow through with the recipe properly. The same can be said for people who would feel neutral about a recipe but do not bother returning to the website and leave any ratings. People usually leave a rating if they have tried a recipe or follow through with creating it (without failing) and enjoyed it. A person's feelings of enjoying the recipe would then lead them to take the time to return to the website and leave a positive rating.
+We believe that the misssingess of the `rating` column is NMAR because a person is less likely to return to the website to leave a rating if they hate or fail to follow through with the recipe properly. The same can be said for people who would feel neutral about a recipe but do not bother returning to the website and leave any ratings. People usually leave a rating if they have tried a recipe or follow through with creating it (without failing) and enjoyed it. A person's feelings of enjoying the recipe would then lead them to take the time to return to the website and leave a positive rating.
 
 ### Missingness Dependency
 
-We wanted to look into the missingness of the 'rating' column in our merged 'recipes_reviews' DataFrame by testing whether 'rating' is dependent on other existing columns. To do this, we test whether or not the missingness of the 'rating' column is dependent on 'carb_prop' which is the proportion of carbohydrtaes in a given recipe. We would also test whether or not the missingness of 'rating' column is dependent on the amount of calories there are in a given recipe.
+We wanted to look into the missingness of the `rating` column in our merged `recipes_reviews` DataFrame by testing whether `rating` is dependent on other existing columns. To do this, we test whether or not the missingness of the `rating` column is dependent on `carb_prop` which is the proportion of carbohydrtaes in a given recipe. We would also test whether or not the missingness of `rating` column is dependent on the amount of calories there are in a given recipe.
 
-To test whether or not the missingness of the 'rating' column is dependent on 'carb_prop' which is the proportion of carbohydrtaes in a given recipe, we ran a permutation test by shuffling the missingness of the 'rating' column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
+To test whether or not the missingness of the `rating` column is dependent on `carb_prop` which is the proportion of carbohydrtaes in a given recipe, we ran a permutation test by shuffling the missingness of the `rating` column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
 
 To investigate this goal, we ran a permutation test following the guide below:
 
@@ -242,14 +242,16 @@ Significance Level: 0.05
   height="600"
   frameborder="0"
 ></iframe>
-The observed difference of means for 'missing_rating' and 'carb_prop' we got is roughly 0.003209, indicated by the red line on the graph. Because the p_value we found (0.1) is greater than 0.05, we fail to reject the null hypothesis. Concluding that the missingness of the 'rating' column is not dependent on 'carb_prop'
+
+The observed difference of means for `missing_rating` and `carb_prop` we got is roughly 0.003209, indicated by the red line on the graph. Because the p_value we found (0.1) is greater than 0.05, we fail to reject the null hypothesis. Concluding that the missingness of the `rating` column is not dependent on `carb_prop`.
 <iframe
   src="assets/distr_rating_carb.html"
   width="800"
   height="600"
   frameborder="0"
 ></iframe>
-To test whether or not the missingness of the 'rating' column is dependent on 'calories (#)' which is the number of calories in a given recipe, we ran a permutation test by shuffling the missingness of the 'rating' column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
+
+To test whether or not the missingness of the `rating` column is dependent on `calories (#)` which is the number of calories in a given recipe, we ran a permutation test by shuffling the missingness of the `rating` column 1000 times to collect 1000 simulated mean differences between the distribution with missing data and without missing data.
 
 To investigate this goal, we ran a permutation test following the guide below:
 
@@ -267,7 +269,7 @@ Significance Level: 0.05
   frameborder="0"
 ></iframe>
 
-The observed difference of means for 'missing_rating' and 'calories (#)' we got is roughly 69.007228, indicated by the red line on the graph. Because the p_value we found (0.0) is less than 0.05, we reject the null hypothesis. Concluding that the missingness of the 'rating' column is dependent on 'calories (#)'
+The observed difference of means for `missing_rating` and `calories (#)` we got is roughly 69.007228, indicated by the red line on the graph. Because the p_value we found (0.0) is less than 0.05, we reject the null hypothesis. Concluding that the missingness of the `rating` column is dependent on `calories (#)`
 <iframe
   src="assets/emp_rating_n_ingredients.html"
   width="800"
@@ -289,9 +291,15 @@ Alternate Hypothesis: People rate recipes with high carbohydrates lower than rec
 
 Test Statistic: The absolute difference of mean bwteeen rating of high carb recipes and not high carb recipes
 
-Significance Level: 0.05
+Significance Level: 0.5
+<iframe
+  src="assets/hypothesis.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
-The observed difference of means for 'rating' and 'carb_heavy' we got is roughly -0.0067145, indicated by the red line on the graph. Because the p_value we found (0.903) is more than 0.05, we fail reject the null hypothesis. Concluding that people rate recipes equally.
+The observed difference of means for `rating` and `carb_heavy` we got is roughly -0.0067145, indicated by the red line on the graph. Because the p_value we found (0.903) is more than 0.05, we fail reject the null hypothesis. Concluding that people rate recipes equally.
 
 ## Framing a Prediction Problem
 
