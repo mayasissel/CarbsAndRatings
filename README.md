@@ -175,7 +175,12 @@ Our cleaned DataFrame `recipe_reviews` ended up with 234429 rows and 27 columns.
 
 For univariate analysis, we looked into the distribution of the proportion of carbohydtrates in recipes. In the graph below, the distribution is skewed to the middle, heavily leaning right side, indicating to us that a majority of recipes have a low proportion of carbohydrates. This skew also indicates to us that as the carbohydrate proportion rises, the less recipes there are on food.com.
 
-<iframe src="assets/univariate.html" width="800" height="600" frameborder="0"></iframe>
+<iframe 
+    src="assets/univariate.html" 
+    width="800" 
+    height="600" 
+    frameborder="0"
+></iframe>
 
 ### Bivariate Analysis
 
