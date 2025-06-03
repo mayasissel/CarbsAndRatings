@@ -305,7 +305,7 @@ The observed difference of means for `rating` and `carb_heavy` we got is roughly
 
 ## Framing a Prediction Problem
 
-In this project, we plan to predict the number of minutes a recipe would take and it would be a regression problem because it is a continuous numerical value. Where we cannot limit the cooking time to a fixed set of values. For us to predict the number of minutes a recipe would take, we will build a regression model.
+In this project, we plan to predict the number of minutes a recipe would take and it would be a regression problem because it is a continuous numerical value, where we cannot limit the cooking time to a fixed set of values. For us to predict the number of minutes a recipe would take, we will build a regression model.
 
 We want to predict the number of minutes it takes for a recipe (`minutes` column) because the number of minutes can be helpful in deciding what to cook and if the person has enough time to follow the recipe. To evaluate our model, we plan to use root mean squared error because it penalizes larger errors more heavily and it's also expressed in minutes allowing for us to interpret results easier.
 
