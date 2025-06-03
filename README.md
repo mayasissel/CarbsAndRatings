@@ -313,6 +313,8 @@ The information we have prior to making our prediction model are columns in our 
 
 ## Baseline Model
 
+For our baseline model, the features we will be using are `avg_rating` a numerical column containing the average rating of a given recipe and `carb_prop` a numerical column containing the decimal proportion of carbohydrates in a given recipe. Both of these feastures would be quantitative.
+
 ## Final Model
 
 ## Fairness Analysis
