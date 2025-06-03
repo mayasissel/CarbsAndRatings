@@ -315,6 +315,8 @@ The information we have prior to making our prediction model are columns in our 
 
 For our baseline model, the features we will be using are `avg_rating` a numerical column containing the average rating of a given recipe and `carb_prop` a numerical column containing the decimal proportion of carbohydrates in a given recipe. Both of these feastures would be quantitative.
 
+The rmse result we got 74.56. This result tells how far off our predicted cooking times are from the actual values. We do not believe our baseline model is "good" because currently the predicted values are very far from the actual values.
+
 ## Final Model
 
 For the final model, the features we decided to use are `avg_rating`, `carb_prop`, `n_steps` and `n_ingredients`.
@@ -328,6 +330,8 @@ This numerical column represents the average rating given by users for a given r
 This is a numerical column that represents the proportion of carbohydrates in a given recipe. We decided to use this feature for our model because 
 
 `n_steps`
+
+This is a numerical column that represents the number of steps a given recipe has. We decided to use this feature because we noticed that the more steps a recipe has the longer it 
 
 `n_ingredients`
 
