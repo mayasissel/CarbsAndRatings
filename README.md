@@ -317,4 +317,19 @@ For our baseline model, the features we will be using are `avg_rating` a numeric
 
 ## Final Model
 
+For the final model, the features we decided to use are `avg_rating`, `carb_prop`, `n_steps` and `n_ingredients`.
+
+`avg_rating`
+
+This numerical column represents the average rating given by users for a given recipe. We decided to use this feature for our model because it is reasonable to believe the recipe rating can indicate the practicality of a given recipe.
+
+`carb_prop`
+
+This is a numerical column that represents the proportion of carbohydrates in a given recipe. We decided to use this feature for our model because 
+
+`n_steps`
+
+`n_ingredients`
+
+
 ## Fairness Analysis
