@@ -307,7 +307,7 @@ The observed difference of means for `rating` and `carb_heavy` we got is roughly
 
 In this project we plan to predict the number of minutes a recipe would take and it would be a regression problem because it is a continuous numerical value. Where we cannot limit the cooking time to a fixed set of values. For us to predict the number of minutes a recipe would take, we will build a regression model.
 
-We want to predict the number of minutes it takes for a recipe (`minutes` column) because the number of minutes can be helpful in deciding what to cook and if the person has enough time to follow the recipe. To evaluate our model, we plan to use root mean squared error because
+We want to predict the number of minutes it takes for a recipe (`minutes` column) because the number of minutes can be helpful in deciding what to cook and if the person has enough time to follow the recipe. To evaluate our model, we plan to use root mean squared error because it penalizes larger errors more heavily and it's also expressed in minutes allowing for us to interpret results easier.
 
 The information we have prior to making our prediction model are columns in our merged Dataframe, using a mix of columns from the `recipes` Dataframe and the `interactions`. We want to use these columns in creating our prediction model because they contain features that can be related to how long the cooking time takes.
 
