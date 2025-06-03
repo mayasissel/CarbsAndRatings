@@ -335,5 +335,7 @@ This is a numerical column that represents the number of steps a given recipe ha
 
 `n_ingredients`
 
+`calories (#)`
+
 
 ## Fairness Analysis
