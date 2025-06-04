@@ -313,7 +313,7 @@ The information we have prior to making our prediction model are columns in our 
 
 ## Baseline Model
 
-For our baseline model, we are using a linear regression model. The features we will be using are `avg_rating` a numerical column containing the average rating of a given recipe and `carb_prop` a numerical column containing the decimal proportion of carbohydrates in a given recipe. Both of these feastures would be quantitative. We have also filtered the `recipe_reviews` Dataframe so that it only includes cooking times that are less than or equal to 500 minutes.
+For our baseline model, we are using a linear regression model. The features we will be using are `avg_rating` a numerical column containing the average rating of a given recipe and `carb_prop` a numerical column containing the decimal proportion of carbohydrates in a given recipe. Both of these feastures would be quantitative. We have also filtered the `recipe_reviews` Dataframe so that it only includes cooking times that are less than or equal to 500 minutes. We did this so that the result of the model is not heavily skewed by the recipes with longer cooking times.
 
 We are using the <b>root mean squared error</b> as the metric for this model. The rmse result we got <b>74.56</b>. This result tells how far off our predicted cooking times are from the actual values. We do not believe our baseline model is "good" because currently the predicted values are very far from the actual values.
 
