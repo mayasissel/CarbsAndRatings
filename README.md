@@ -315,27 +315,36 @@ The information we have prior to making our prediction model are columns in our 
 
 For our baseline model, we are using a linear regression model. The features we will be using are `avg_rating` a numerical column containing the average rating of a given recipe and `carb_prop` a numerical column containing the decimal proportion of carbohydrates in a given recipe. Both of these feastures would be quantitative. We have also filtered the `recipe_reviews` Dataframe so that it only includes cooking times that are less than or equal to 500 minutes. We did this so that the result of the model is not heavily skewed by the recipes with longer cooking times.
 
-We are using the <b>root mean squared error</b> as the metric for this model. The rmse result we got <b>74.56</b>. This result tells how far off our predicted cooking times are from the actual values. We do not believe our baseline model is "good" because currently the predicted values are very far from the actual values.
+We are using the <b>root mean squared error (RMSE)</b> as the metric for this model. The rmse result we got <b>74.56</b>. This result tells how far off our predicted cooking times are from the actual values. We do not believe our baseline model is "good" because currently the predicted values are very far from the actual values.
 
 ## Final Model
 
-For the final model, the features we decided to use are `avg_rating`, `carb_prop`, `n_steps` and `n_ingredients`.
+For our final model, the features we decided to use are `avg_rating`, `carb_prop`, `n_steps` , `n_ingredients` and `calories (#)` to predict the cooking time (in minutes) of a recipe. We chose these features because we believe that their relations to each other can more accurately predict the cooking time of a given recipe.
 
 `avg_rating`
 
-This numerical column represents the average rating given by users for a given recipe. We decided to use this feature for our model because it is reasonable to believe the recipe rating can indicate the practicality of a given recipe.
+This numerical column represents the average user rating for a given recipe. We decided to use this feature for our model because it is reasonable to believe the recipe rating can indicate the ease or practicality of a given recipe. Simple recipes that take less time could be rated higher due to convenience and satisfaction. 
 
 `carb_prop`
 
-This is a numerical column that represents the proportion of carbohydrates in a given recipe. We decided to use this feature for our model because 
+This numerical column represents the proportion of carbohydrates in a given recipe. We decided to use this feature for our model because it may help us predict cooking time based on if the recipe is or is not carbohydrate-heavy. Recipes that have more carbohydrates, such as baked goods, may take longer than other recipes and could be useful in preedicting cooking times.
 
 `n_steps`
 
-This is a numerical column that represents the number of steps a given recipe has. We decided to use this feature because we noticed that the more steps a recipe has the longer it 
+This numerical column represents the number of steps a given recipe has. We decided to use this feature because we noticed that the more steps a recipe has, the longer the cooking time will be. Since the number of steps relates directly to cooking time, it is helpful in predicting the cooking time of a recipe.
 
 `n_ingredients`
 
+This numerical column represents the number of ingredients a given reecipe has. We decided to use this feature because a recipe with more ingredients also implies that the recipe will take longer to prepare. It serves as a good indicator of the total cooking time due to what it can tell you about the preparation.
+
 `calories (#)`
 
+This numerical column represents the total number of calories in each recipe. We deecided to use this feature because high-calorie recipes may be useful in indicating the cooking time of the dish. The number of calories serves as a good tool to predict cooking times because of its relation to certain cooking methods that may increase or decrease the cooking time.
+
+We used `RandomForestRegressor` as our modeling algorithm. Random forests are capable of capturing non-linear relationships and feature interactions that linear models may miss. The cooking time is most likely dependent on the relationships between the features that we have listed above. 
+
+We used `GridSearchCV` to tune the hyperparameters of `max_depth` and `n_estimators` of the `RandomForestRegressor`. The best combination of the hyperparameters is None for the `max_depth` and 150 for the `n_estimators`.
+
+The <b>RMSE</b> of the final model is <b>37.16</b>, which is a BLANK decrease from the RMSE of the baseline model. The baseline model used linear regression and only two features, resulting in a higher RMSE. The final model used more relevant features and a more flexible model, which helped to reduce the RMSE and thus improve the model.
 
 ## Fairness Analysis
