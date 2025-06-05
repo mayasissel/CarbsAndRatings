@@ -348,3 +348,23 @@ We used `GridSearchCV` to tune the hyperparameters of `max_depth` and `n_estimat
 The <b>RMSE</b> of the final model is <b>37.16</b>, which is a 37.4 decrease from the RMSE of the baseline model. The baseline model used linear regression and only two features, resulting in a higher RMSE. The final model used more relevant features and a more flexible model, which helped to reduce the RMSE and thus improve the model.
 
 ## Fairness Analysis
+
+For our fairness analysis, we decided to first filter our dataframe to drop any outliers with cooking time over 500 minutes. Next we split the Dataframe into two groups: `carb_heavy` and not `carb_heavy`. This column is a boolean column that checks whether the given recipe carbohydrate proportion is higher than or equal to .65 (making it a high carbohdrate proportion recipe). We found that for a recipe to be considered high in carbohydrates the proportion must be 65% or higher which is why we used that as our comparison. For our fairness analysis we decided to use the absolute difference in RMSE between our recipes with low carbohydrates and high carbohydrates.
+
+To investigate this goal, we ran a permutation test following the guide below:
+
+Null Hypothesis: Our model is fair. It's precision for low carbohydrate recipes and high carbohydrate proportion recipes are roughly the same and any difference is due to random chance.
+
+Alternate Hypothesis: Our model is unfair. It's precision for lower carbohydrate proportion recipes is lower than it\'s precision for high carb proportion recipes
+
+Test Statistic: The absolute difference of RMSE between low and high carbohydrate proportion recipes
+Significance Level: 0.05
+
+<iframe
+  src="assets/fair.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+To run the permutation test, we used our previously created column `carb_heavy` which represents which recipes whose carbohydrate proportion is higher than or equal to .65 to differentiate between recipes with low and high carbs. When we took the difference, our observed value was 0.4779. We then decided to shuffled the column `carb_heavy` column 1000 times and then retook the mean difference to collect 1000 simulated samples. After running our permutation tests we got a resulting p_value of 0.47. Because the p_value is larger than 0.05, we fail to reject our null hypothesis. Our model is fair. It's precision for low carbohydrate recipes and high carbohydrate proportion recipes are roughly the same and any difference is due to random chance.
