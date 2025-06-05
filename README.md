@@ -345,6 +345,6 @@ We used `RandomForestRegressor` as our modeling algorithm. Random forests are ca
 
 We used `GridSearchCV` to tune the hyperparameters of `max_depth` and `n_estimators` of the `RandomForestRegressor`. The best combination of the hyperparameters is None for the `max_depth` and 150 for the `n_estimators`.
 
-The <b>RMSE</b> of the final model is <b>37.16</b>, which is a BLANK decrease from the RMSE of the baseline model. The baseline model used linear regression and only two features, resulting in a higher RMSE. The final model used more relevant features and a more flexible model, which helped to reduce the RMSE and thus improve the model.
+The <b>RMSE</b> of the final model is <b>37.16</b>, which is a 37.4 decrease from the RMSE of the baseline model. The baseline model used linear regression and only two features, resulting in a higher RMSE. The final model used more relevant features and a more flexible model, which helped to reduce the RMSE and thus improve the model.
 
 ## Fairness Analysis
